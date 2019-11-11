@@ -1,0 +1,79 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Snowfall Script",
+	"patterns": [
+		{
+			"include": "#comment"
+		},
+		{
+			"include": "#label"
+		},
+		{
+			"include": "#dialog"
+		},
+		{
+			"include": "#option"
+		},
+		{
+			"include": "#command"
+		},
+		{
+			"include": "#goto"
+		}
+	],
+	"repository": {
+		"comment": {
+			"patterns": [
+				{
+					"name": "comment.line.sf",
+					"match": "^((?!(^@\\ |^-\\ |^\\*\\ |^\\$\\ |^->\\ |^\\t)).)*$"
+				}
+			]
+		},
+		"label": {
+			"patterns": [
+				{
+					"name": "label.line.sf",
+					"match": "^(@\\ )(.*$)"
+				}
+			]
+		},
+		"dialog": {
+			"patterns": [
+				{
+					"name": "dialog.metadata.sf",
+					"match": "^(-\\ )(.*$)"
+				},
+				{
+					"name": "dialog.data.sf",
+					"match": "^(\\t)(.*$)"
+				}
+			]
+		},
+		"option": {
+			"patterns": [
+				{
+					"name": "option.line.sf",
+					"match": "^(\\*\\ )(.*$)"
+				}
+			]
+		},
+		"command": {
+			"patterns": [
+				{
+					"name": "command.line.sf",
+					"match": "^(\\$\\ )(.*$)"
+				}
+			]
+		},
+		"goto": {
+			"patterns": [
+				{
+					"name": "goto.line.sf",
+					"match": "^(->\\ )(.*$)"
+				}
+			]
+		}
+	},
+	"scopeName": "source.sf"
+}

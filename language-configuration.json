@@ -1,0 +1,21 @@
+{
+    // Symbols used as comments.
+    "comments": {
+        // ~
+    },
+
+    // Symbols used as brackets.
+    "brackets": [
+        // ~
+    ],
+
+    // Symbols that are auto closed when typing.
+    "autoClosingPairs": [
+        // ~
+    ],
+
+    // Symbols that that can be used to surround a selection.
+    "surroundingPairs": [
+        // ~
+    ]
+}
