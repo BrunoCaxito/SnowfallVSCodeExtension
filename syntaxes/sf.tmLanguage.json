@@ -25,6 +25,10 @@
 		"comment": {
 			"patterns": [
 				{
+					"name": "comment.header.sf",
+					"match": "\\b[A-Z0-9\\ \\.\\-]{3,}\\b"
+				},
+				{
 					"name": "comment.line.sf",
 					"match": "^((?!(^@\\ |^-\\ |^\\*\\ |^\\$\\ |^->\\ |^\\t)).)*$"
 				}

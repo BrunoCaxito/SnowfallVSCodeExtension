@@ -3,12 +3,22 @@
 	"type": "dark",
 	"tokenColors": [
 		{
+			"name": "Comments scene header lines",
+			"scope": [
+				"comment.header.sf"
+			],
+			"settings": {
+				"foreground": "#D9D9D9",
+				"fontStyle": "bold underline"
+			}
+		},
+		{
 			"name": "Comments and simple lines",
 			"scope": [
 				"comment.line.sf"
 			],
 			"settings": {
-				"foreground": "#424242",
+				"foreground": "#5A5A5A",
 				"fontStyle": "italic"
 			}
 		},
