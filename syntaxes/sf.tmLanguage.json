@@ -26,7 +26,7 @@
 			"patterns": [
 				{
 					"name": "comment.header.sf",
-					"match": "\\b[A-Z0-9\\ \\.\\-]{3,}\\b"
+					"match": "[0-9A-Z\\ \\.\\-\\'\\,]{12,}"
 				},
 				{
 					"name": "comment.line.sf",
