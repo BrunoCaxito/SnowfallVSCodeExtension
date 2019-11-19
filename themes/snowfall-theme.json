@@ -3,6 +3,16 @@
 	"type": "dark",
 	"tokenColors": [
 		{
+			"name": "Comments scene title lines",
+			"scope": [
+				"comment.title.sf"
+			],
+			"settings": {
+				"foreground": "#D9D9D9",
+				"fontStyle": "bold"
+			}
+		},
+		{
 			"name": "Comments scene header lines",
 			"scope": [
 				"comment.header.sf"

@@ -25,6 +25,10 @@
 		"comment": {
 			"patterns": [
 				{
+					"name": "comment.title.sf",
+					"match": "(SCENE)[ -Z]+"
+				},
+				{
 					"name": "comment.header.sf",
 					"match": "[0-9A-Z\\ \\.\\-\\'\\,]{12,}"
 				},
