@@ -3,13 +3,16 @@
     "displayName": "Snowfall Script Language Support",
     "description": "Syntax highlighting for Snowfall script language",
     "version": "1.0.0",
+
     "engines": {
         "vscode": "^1.39.0"
     },
+
     "categories": [
         "Programming Languages",
         "Themes"
     ],
+
     "contributes": {
         "languages": [
             {
@@ -19,6 +22,7 @@
                 "configuration": "./language-configuration.json"
             }
         ],
+
         "grammars": [
             {
                 "language": "snowfall",
@@ -26,6 +30,7 @@
                 "path": "./syntaxes/sf.tmLanguage.json"
             }
         ],
+
         "themes": [
             {
                 "label": "Snowfall Script Theme",
