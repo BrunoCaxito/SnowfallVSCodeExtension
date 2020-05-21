@@ -21,7 +21,7 @@ Add this to your __settings.json__, for better code coloring.
             {
                 "name": "Comments scene title lines",
                 "scope": [
-                    "comment.title.sf"
+                    "strong.comment.title.sf"
                 ],
                 "settings": {
                     "foreground": "#D9D9D9",
@@ -31,7 +31,7 @@ Add this to your __settings.json__, for better code coloring.
             {
                 "name": "Comments scene header lines",
                 "scope": [
-                    "comment.header.sf"
+                    "markup.underline.comment.header.sf"
                 ],
                 "settings": {
                     "foreground": "#D9D9D9",
@@ -41,7 +41,7 @@ Add this to your __settings.json__, for better code coloring.
             {
                 "name": "Comments and simple lines",
                 "scope": [
-                    "comment.line.sf"
+                    "markup.italic.comment.line.sf"
                 ],
                 "settings": {
                     "foreground": "#5A5A5A",
@@ -51,7 +51,7 @@ Add this to your __settings.json__, for better code coloring.
             {
                 "name": "Label",
                 "scope": [
-                    "label.line.sf"
+                    "entity.name.type.label.sf"
                 ],
                 "settings": {
                     "foreground": "#ec407a",
@@ -61,7 +61,7 @@ Add this to your __settings.json__, for better code coloring.
             {
                 "name": "Dialog Tags",
                 "scope": [
-                    "dialog.metadata.sf"
+                    "markup.heading.dialog.metadata.sf"
                 ],
                 "settings": {
                     "foreground": "#2196f3"
@@ -70,7 +70,7 @@ Add this to your __settings.json__, for better code coloring.
             {
                 "name": "Dialog Text",
                 "scope": [
-                    "dialog.data.sf"
+                    "variable.dialog.data.sf"
                 ],
                 "settings": {
                     "foreground": "#78909c"
@@ -79,7 +79,7 @@ Add this to your __settings.json__, for better code coloring.
             {
                 "name": "Player Option",
                 "scope": [
-                    "option.line.sf"
+                    "invalid.option.sf"
                 ],
                 "settings": {
                     "foreground": "#ef5350"
@@ -88,7 +88,7 @@ Add this to your __settings.json__, for better code coloring.
             {
                 "name": "Script Command",
                 "scope": [
-                    "command.line.sf"
+                    "comment.command.sf"
                 ],
                 "settings": {
                     "foreground": "#66bb6a",
@@ -98,7 +98,7 @@ Add this to your __settings.json__, for better code coloring.
             {
                 "name": "Go To Label",
                 "scope": [
-                    "goto.line.sf"
+                    "keyword.control.goto.sf"
                 ],
                 "settings": {
                     "foreground": "#9575cd"
