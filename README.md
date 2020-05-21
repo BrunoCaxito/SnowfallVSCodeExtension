@@ -64,7 +64,8 @@ Add this to your __settings.json__, for better code coloring.
                     "markup.heading.dialog.metadata.sf"
                 ],
                 "settings": {
-                    "foreground": "#2196f3"
+                    "foreground": "#2196f3",
+                    "fontStyle": ""
                 }
             },
             {
