@@ -1,7 +1,7 @@
 {
     "name": "snowfall-script",
-    "displayName": "Snowfall Script Language Support",
-    "description": "Syntax highlighting for Snowfall script language",
+    "displayName": "Snowfall Storytelling Plugin Support",
+    "description": "Syntax highlighting for Snowfall Storytelling Plugin",
     "version": "1.0.0",
 
     "engines": {
@@ -9,8 +9,7 @@
     },
 
     "categories": [
-        "Programming Languages",
-        "Themes"
+        "Programming Languages"
     ],
 
     "contributes": {
@@ -28,14 +27,6 @@
                 "language": "snowfall",
                 "scopeName": "source.sf",
                 "path": "./syntaxes/sf.tmLanguage.json"
-            }
-        ],
-
-        "themes": [
-            {
-                "label": "Snowfall Script Theme",
-                "uiTheme": "vs-dark",
-                "path": "./themes/snowfall-theme.json"
             }
         ]
     }
