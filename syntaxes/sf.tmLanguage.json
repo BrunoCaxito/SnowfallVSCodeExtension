@@ -1,87 +1,81 @@
 {
+	"information_for_contributors": [
+		"This file has been converted from https://github.com/textmate/ini.tmbundle/blob/master/Syntaxes/Ini.plist",
+		"If you want to provide a fix or improvement, please create a pull request against the original repository.",
+		"Once accepted there, we are happy to receive an update request."
+	],
+
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
 	"name": "Snowfall Script",
+	"scopeName": "source.sf",
+
 	"patterns": [
 		{
-			"include": "#comment"
+			"name": "entity.name.type.label.sf",
+			"begin": "^@ ",
+			"end": "\\n"
 		},
 		{
-			"include": "#label"
+			"name": "markup.heading.dialog.metadata.sf",
+			"begin": "^\\- ",
+			"end": "\\n"
 		},
 		{
-			"include": "#dialog"
+			"name": "variable.dialog.data.sf",
+			"begin": "^\\t",
+			"end": "\\n"
 		},
 		{
-			"include": "#option"
+			"name": "invalid.option.sf",
+			"begin": "(^\\*\\s)(.*)",
+			"beginCaptures": {
+				"1": {
+					"name": "invalid.option.sign.sf"
+				},
+
+				"2": {
+					"name": "invalid.option.text.sf",
+
+					"patterns": [
+						{
+							"name": "invalid.option.text.richtext.sf",
+							"match": "<(\\w*).*?>"
+						},
+						{
+							"name": "invalid.option.text.number.sf",
+							"match": "[0-9]"
+						},
+						{
+							"name": "invalid.option.text.operators.sf",
+							"match": "(\\|)|(\\=)|(\\+)|(\\-)|(\\*)|(/)|(\\=\\=)|(\\!\\=)|(>)|(>\\=)|(<)|(<\\=)"
+						}
+					]
+				}
+			},
+
+			"end": "\\n"
 		},
 		{
-			"include": "#command"
+			"name": "comment.command.sf",
+			"begin": "^\\$ ",
+			"end": "\\n"
 		},
 		{
-			"include": "#goto"
+			"name": "keyword.control.goto.sf",
+			"begin": "^-> ",
+			"end": "\\n"
+		},
+		{
+			"name": "strong.comment.title.sf",
+			"match": "(SCENE)[ -Z]+"
+		},
+		{
+			"name": "markup.underline.comment.header.sf",
+			"match": "[0-9A-Z\\s\\.\\-\\'\\,]{12,}"
+		},
+		{
+			"name": "markup.italic.comment.line.sf",
+			"match": "."
 		}
-	],
-	"repository": {
-		"comment": {
-			"patterns": [
-				{
-					"name": "strong.comment.title.sf",
-					"match": "(SCENE)[ -Z]+"
-				},
-				{
-					"name": "markup.underline.comment.header.sf",
-					"match": "[0-9A-Z\\ \\.\\-\\'\\,]{12,}"
-				},
-				{
-					"name": "markup.italic.comment.line.sf",
-					"match": "^((?!(^@\\ |^-\\ |^\\*\\ |^\\$\\ |^->\\ |^\\t)).)*$"
-				}
-			]
-		},
-		"label": {
-			"patterns": [
-				{
-					"name": "entity.name.type.label.sf",
-					"match": "^(@\\ )(.*$)"
-				}
-			]
-		},
-		"dialog": {
-			"patterns": [
-				{
-					"name": "markup.heading.dialog.metadata.sf",
-					"match": "^(-\\ )(.*$)"
-				},
-				{
-					"name": "variable.dialog.data.sf",
-					"match": "^(\\t)(.*$)"
-				}
-			]
-		},
-		"option": {
-			"patterns": [
-				{
-					"name": "invalid.option.sf",
-					"match": "^(\\*\\ )(.*$)"
-				}
-			]
-		},
-		"command": {
-			"patterns": [
-				{
-					"name": "comment.command.sf",
-					"match": "^(\\$\\ )(.*$)"
-				}
-			]
-		},
-		"goto": {
-			"patterns": [
-				{
-					"name": "keyword.control.goto.sf",
-					"match": "^(->\\ )(.*$)"
-				}
-			]
-		}
-	},
-	"scopeName": "source.sf"
+	]
 }

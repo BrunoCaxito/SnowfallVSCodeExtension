@@ -11,11 +11,11 @@
 
     // Symbols that are auto closed when typing.
     "autoClosingPairs": [
-        // ~
+        { "open": "<", "close": ">", "notIn": [ "string" ] }
     ],
 
     // Symbols that that can be used to surround a selection.
     "surroundingPairs": [
-        // ~
+        [ "<", ">" ]
     ]
 }
