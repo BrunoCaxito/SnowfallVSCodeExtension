@@ -1,81 +1,281 @@
 {
-	"information_for_contributors": [
-		"This file has been converted from https://github.com/textmate/ini.tmbundle/blob/master/Syntaxes/Ini.plist",
-		"If you want to provide a fix or improvement, please create a pull request against the original repository.",
-		"Once accepted there, we are happy to receive an update request."
-	],
-
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
 	"name": "Snowfall Script",
 	"scopeName": "source.sf",
 
 	"patterns": [
 		{
-			"name": "entity.name.type.label.sf",
-			"begin": "^@ ",
-			"end": "\\n"
+			"include": "#metadata"
 		},
-		{
-			"name": "markup.heading.dialog.metadata.sf",
-			"begin": "^\\- ",
-			"end": "\\n"
-		},
-		{
-			"name": "variable.dialog.data.sf",
-			"begin": "^\\t",
-			"end": "\\n"
-		},
-		{
-			"name": "invalid.option.sf",
-			"begin": "(^\\*\\s)(.*)",
-			"beginCaptures": {
-				"1": {
-					"name": "invalid.option.sign.sf"
-				},
 
-				"2": {
-					"name": "invalid.option.text.sf",
+		{
+			"include": "#dialog"
+		},
+		{
+			"include": "#label"
+		},
+		{
+			"include": "#goto"
+		},
+		{
+			"include": "#options"
+		},
+		{
+			"include": "#command"
+		},
+		{
+			"include": "#comment"
+		}
+	],
 
+	"repository": {
+		"metadata": {
+			"name": "metadata.sf",
+			"comment": "instruction metadata",
+			"match": "\\|.*",
+			"captures": {
+				"0": {
 					"patterns": [
 						{
-							"name": "invalid.option.text.richtext.sf",
-							"match": "<(\\w*).*?>"
-						},
-						{
-							"name": "invalid.option.text.number.sf",
-							"match": "[0-9]"
-						},
-						{
-							"name": "invalid.option.text.operators.sf",
-							"match": "(\\|)|(\\=)|(\\+)|(\\-)|(\\*)|(/)|(\\=\\=)|(\\!\\=)|(>)|(>\\=)|(<)|(<\\=)"
+							"patterns": [
+								{
+									"name": "metadata.expressions.sf",
+									"comment": "Expression",
+									"match": "(\\|)(.*?)(?=(\\||$))",
+									"captures": {
+										"1": {
+											"name": "concat.sf"
+										},
+										"2": {
+											"patterns": [
+												{
+													"name": "metadata.expressions.sf",
+													"comment": "Expression",
+													"match": "(\\#\\w+)|(->\\s\\w+)|((.*?)(=|!|(?<!-)>|<|\\+|-(?!>)|\\*|\/)(.*))",
+													"captures": {
+														"0": {
+															"name": "function.sf"
+														},
+														"1": {
+															"name": "tag.sf"
+														},
+														"2": {
+															"name": "goto.sf"
+														},
+														"3": {
+															"name": "command.sf"
+														},
+														"4": {
+															"name": "lvalue.sf"
+														},
+														"5": {
+															"name": "operator.sf"
+														},
+														"6": {
+															"name": "rvalue.sf",
+															"patterns": [
+																{
+																	"include": "#richtext"
+																},
+																{
+																	"name": "keyword.sf",
+																	"match": "(?<!\\w)(true|false|on|off)(?!\\w)"
+																},
+
+																{
+																	"name": "number.sf",
+																	"match": "(?<!\\w)([\\d]+)(?!\\w)"
+																},
+
+																{
+																	"name": "string.sf",
+																	"match": "\\w+"
+																},
+
+																{
+																	"name": "entity.name.variable.sf",
+																	"match": "{.*}"
+																}
+															]
+														}
+													}
+												}
+											]
+										}
+									}
+								}
+							]
 						}
 					]
 				}
-			},
+			}
+		},
 
-			"end": "\\n"
+		"richtext": {
+			"name": "entity.name.tag.sf",
+			"match": "<(\\w*).*?>"
 		},
-		{
-			"name": "comment.command.sf",
-			"begin": "^\\$ ",
-			"end": "\\n"
+
+		"dialog": {
+			"patterns": [
+				{
+					"name": "keyword.dialog.sf",
+					"match": "^(\\-\\ )(.*?)(?=\\||$)(.*$)",
+					"captures": {
+						"1": {
+							"name": "keyword.dialog.sign.sf"
+						},
+
+						"2": {
+							"name": "keyword.dialog.text.sf"
+						},
+
+						"3": {
+							"name": "keyword.dialog.metadata.sf",
+							"patterns": [
+								{
+									"include": "#metadata"
+								}
+							]
+						}
+					}
+				},
+				{
+					"name": "string.dialog.sf",
+					"match": "^(\\t)(.*$)",
+					"captures": {
+						"1": {
+							"name": "string.dialog.tag.sf"
+						},
+
+						"2": {
+							"name": "string.dialog.text.sf",
+
+							"patterns": [
+								{
+									"include": "#richtext"
+								}
+							]
+						}
+					}
+				}
+			]
 		},
-		{
-			"name": "keyword.control.goto.sf",
-			"begin": "^-> ",
-			"end": "\\n"
+
+		"label": {
+			"name": "entity.name.namespace.label.sf",
+			"match": "^(@\\ )(.*?)(?=\\ \\||$)(.*$)",
+			"captures": {
+				"1": {
+					"name": "entity.name.namespace.label.sign.sf"
+				},
+
+				"2": {
+					"name": "entity.name.namespace.label.text.sf"
+				},
+
+				"3": {
+					"name": "entity.name.namespace.metadata.label",
+					"patterns": [
+						{
+							"include": "#metadata"
+						}
+					]
+				}
+			}
 		},
-		{
-			"name": "strong.comment.title.sf",
-			"match": "(SCENE)[ -Z]+"
+
+		"goto": {
+			"name": "variable.other.event.goto.sf",
+			"match": "^(\\->\\ )(.*?)(?=\\||$)(.*$)",
+			"captures": {
+				"1": {
+					"name": "variable.other.event.goto.sign.sf"
+				},
+
+				"2": {
+					"name": "variable.other.event.goto.label.sf"
+				},
+
+				"3": {
+					"name": "variable.other.event.goto.metadata.sf",
+					"patterns": [
+						{
+							"include": "#metadata"
+						}
+					]
+				}
+			}
 		},
-		{
-			"name": "markup.underline.comment.header.sf",
-			"match": "[0-9A-Z\\s\\.\\-\\'\\,]{12,}"
+
+		"options": {
+			"name": "entity.name.type.enum.option.sf",
+			"match": "^(\\*\\ )(.*?)(?=\\||$)(.*$)",
+			"captures": {
+				"1": {
+					"name": "entity.name.type.enum.option.sign.sf"
+				},
+
+				"2": {
+					"name": "entity.name.type.enum.option.text.sf",
+					"patterns": [
+						{
+							"include": "#richtext"
+						}
+					]
+				},
+
+				"3": {
+					"name": "entity.name.type.enum.option.metadata.sf",
+					"patterns": [
+						{
+							"include": "#metadata"
+						}
+					]
+				}
+			}
 		},
-		{
-			"name": "markup.italic.comment.line.sf",
-			"match": "."
+
+		"command": {
+			"name": "entity.name.function.command.sf",
+			"match": "^(\\$\\ )(.*?)(?=\\||$)(.*$)",
+			"captures": {
+				"1": {
+					"name": "entity.name.function.command.sign.sf"
+				},
+
+				"2": {
+					"name": "entity.name.function.command.instruction.sf"
+				},
+
+				"3": {
+					"name": "entity.name.function.command.metadata.sf",
+					"patterns": [
+						{
+							"include": "#metadata"
+						}
+					]
+				}
+			}
+		},
+
+		"comment": {
+			"patterns": [
+				{
+					"name": "comment.title.sf",
+					"match": "(SCENE)[ -Z]+"
+				},
+
+				{
+					"name": "comment.header.sf",
+					"match": "[0-9A-Z\\s\\.\\-\\'\\,]{12,}"
+				},
+
+				{
+					"name": "comment.sf",
+					"match": "^(?!(\\-|\\t|@|\\*|\\$))(.*)"
+				}
+			]
 		}
-	]
+	}
 }
