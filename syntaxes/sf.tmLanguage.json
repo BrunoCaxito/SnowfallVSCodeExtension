@@ -31,7 +31,6 @@
 	"repository": {
 		"metadata": {
 			"name": "metadata.sf",
-			"comment": "instruction metadata",
 			"match": "\\|.*",
 			"captures": {
 				"0": {
@@ -39,51 +38,43 @@
 						{
 							"patterns": [
 								{
-									"name": "metadata.expressions.sf",
-									"comment": "Expression",
 									"match": "(\\|)(.*?)(?=(\\||$))",
 									"captures": {
 										"1": {
 											"name": "concat.sf"
 										},
+
 										"2": {
 											"patterns": [
 												{
 													"name": "metadata.expressions.sf",
-													"comment": "Expression",
-													"match": "(\\#\\w+)|(->\\s\\w+)|((.*?)(=|!|(?<!-)>|<|\\+|-(?!>)|\\*|\/)(.*))",
+													"match": "(\\#.[^\\s]*)|(->.[^\\s]*)|((.*?)(==|!=|>=|<=|(?<!-)>|<|=|\\+|-(?!>)|\\*|\/)(.*))|(\\w+.*)",
 													"captures": {
-														"0": {
-															"name": "function.sf"
-														},
 														"1": {
-															"name": "tag.sf"
+															"name": "variable.other.constant.sf"
 														},
 														"2": {
-															"name": "goto.sf"
-														},
-														"3": {
-															"name": "command.sf"
+															"name": "keyword.control.goto.text.param.sf"
 														},
 														"4": {
-															"name": "lvalue.sf"
+															"name": "entity.name.variable.lvalue.sf"
 														},
 														"5": {
-															"name": "operator.sf"
+															"name": "keyword.operator.sf"
 														},
 														"6": {
-															"name": "rvalue.sf",
 															"patterns": [
 																{
 																	"include": "#richtext"
 																},
+
 																{
-																	"name": "keyword.sf",
+																	"name": "constant.language.sf",
 																	"match": "(?<!\\w)(true|false|on|off)(?!\\w)"
 																},
 
 																{
-																	"name": "number.sf",
+																	"name": "constant.numeric.sf",
 																	"match": "(?<!\\w)([\\d]+)(?!\\w)"
 																},
 
@@ -93,8 +84,21 @@
 																},
 
 																{
-																	"name": "entity.name.variable.sf",
+																	"name": "variable.other.property.sf",
 																	"match": "{.*}"
+																}
+															]
+														},
+														"7": {
+															"patterns": [
+																{
+																	"name": "entity.name.function.instruction.sf",
+																	"match": "\\w+"
+																},
+
+																{
+																	"name": "variable.parameter.sf",
+																	"match": "\\s\\w+"
 																}
 															]
 														}
@@ -119,19 +123,19 @@
 		"dialog": {
 			"patterns": [
 				{
-					"name": "keyword.dialog.sf",
+					"name": "entity.name.type.class.dialog.sf",
 					"match": "^(\\-\\ )(.*?)(?=\\||$)(.*$)",
 					"captures": {
 						"1": {
-							"name": "keyword.dialog.sign.sf"
+							"name": "entity.name.type.class.dialog.sign.sf"
 						},
 
 						"2": {
-							"name": "keyword.dialog.text.sf"
+							"name": "entity.name.type.class.dialog.text.sf"
 						},
 
 						"3": {
-							"name": "keyword.dialog.metadata.sf",
+							"name": "entity.name.type.class.dialog.metadata.sf",
 							"patterns": [
 								{
 									"include": "#metadata"
@@ -144,13 +148,8 @@
 					"name": "string.dialog.sf",
 					"match": "^(\\t)(.*$)",
 					"captures": {
-						"1": {
-							"name": "string.dialog.tag.sf"
-						},
-
 						"2": {
 							"name": "string.dialog.text.sf",
-
 							"patterns": [
 								{
 									"include": "#richtext"
@@ -175,7 +174,7 @@
 				},
 
 				"3": {
-					"name": "entity.name.namespace.metadata.label",
+					"name": "entity.name.namespace.label.metadata.sf",
 					"patterns": [
 						{
 							"include": "#metadata"
@@ -186,19 +185,19 @@
 		},
 
 		"goto": {
-			"name": "variable.other.event.goto.sf",
+			"name": "keyword.control.goto.sf",
 			"match": "^(\\->\\ )(.*?)(?=\\||$)(.*$)",
 			"captures": {
 				"1": {
-					"name": "variable.other.event.goto.sign.sf"
+					"name": "keyword.control.goto.sign.sf"
 				},
 
 				"2": {
-					"name": "variable.other.event.goto.label.sf"
+					"name": "keyword.control.goto.text.sf"
 				},
 
 				"3": {
-					"name": "variable.other.event.goto.metadata.sf",
+					"name": "keyword.control.goto.metadata.sf",
 					"patterns": [
 						{
 							"include": "#metadata"
@@ -245,7 +244,7 @@
 				},
 
 				"2": {
-					"name": "entity.name.function.command.instruction.sf"
+					"name": "entity.name.function.command.text.sf"
 				},
 
 				"3": {
@@ -263,7 +262,7 @@
 			"patterns": [
 				{
 					"name": "comment.title.sf",
-					"match": "(SCENE)[ -Z]+"
+					"match": "(SCENE|ACT|CHAPTER)[ -Z]+"
 				},
 
 				{
@@ -272,7 +271,7 @@
 				},
 
 				{
-					"name": "comment.sf",
+					"name": "comment.line.sf",
 					"match": "^(?!(\\-|\\t|@|\\*|\\$))(.*)"
 				}
 			]
