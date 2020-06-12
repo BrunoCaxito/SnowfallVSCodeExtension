@@ -45,7 +45,7 @@
 									"match": "(\\|)(.*?)(?=(\\||$))",
 									"captures": {
 										"1": {
-											"name": "concat.sf"
+											"name": "keyword.operator.concat.sf"
 										},
 
 										"2": {
@@ -61,7 +61,7 @@
 															"name": "keyword.control.goto.text.param.sf"
 														},
 														"4": {
-															"name": "entity.name.variable.lvalue.sf"
+															"name": "lvalue.sf"
 														},
 														"5": {
 															"name": "keyword.operator.sf"

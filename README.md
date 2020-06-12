@@ -19,90 +19,245 @@ Add this to your __settings.json__, for better code coloring.
     "editor.tokenColorCustomizations": {
         "textMateRules": [
             {
-                "name": "Comments scene title lines",
-                "scope": [
-                    "strong.comment.title.sf"
-                ],
+                "name": "Comment",
+                "scope": [ "comment.title.sf" ],
                 "settings": {
-                    "foreground": "#D9D9D9",
+                    "foreground": "#e0e0e0",
                     "fontStyle": "bold"
                 }
             },
             {
-                "name": "Comments scene header lines",
-                "scope": [
-                    "markup.underline.comment.header.sf"
-                ],
+                "name": "Comment",
+                "scope": [ "comment.header.sf" ],
                 "settings": {
-                    "foreground": "#D9D9D9",
-                    "fontStyle": "bold underline"
+                    "foreground": "#e0e0e0",
+                    "fontStyle": "underline"
                 }
             },
             {
-                "name": "Comments and simple lines",
+                "name": "Comment",
                 "scope": [
-                    "markup.italic.comment.line.sf"
+                    "comment.line.sf",
+                    "comment.indented.sf"
                 ],
                 "settings": {
-                    "foreground": "#5A5A5A",
+                    "foreground": "#424242",
                     "fontStyle": "italic"
                 }
             },
             {
-                "name": "Label",
-                "scope": [
-                    "entity.name.type.label.sf"
-                ],
+                "name": "Cancatenation Operator",
+                "scope": [ "keyword.operator.concat.sf" ],
                 "settings": {
-                    "foreground": "#ec407a",
+                    "foreground": "#303030",
+                    "fontStyle": "bold"
+                }
+            },
+            {
+                "name": "Dialog Sign",
+                "scope": [ "entity.name.type.class.dialog.sign.sf" ],
+                "settings": {
+                    "foreground": "#1565c0",
+                    "fontStyle": "bold"
+                }
+            },
+            {
+                "name": "Dialog Speaker Name",
+                "scope": [ "entity.name.type.class.dialog.text.sf" ],
+                "settings": {
+                    "foreground": "#2196f3",
+                    "fontStyle": "bold"
+                }
+            },
+            {
+                "name": "Dialog Metadata",
+                "scope": [ "entity.name.type.class.dialog.metadata.sf" ],
+                "settings": {
+                    "foreground": "#64b5f6",
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "name": "Dialog Text",
+                "scope": [ "string.dialog.sf" ],
+                "settings": {
+                    "foreground": "#90a4ae"
+                }
+            },
+            {
+                "name": "Label Sign",
+                "scope": [ "entity.name.namespace.label.sign.sf" ],
+                "settings": {
+                    "foreground": "#ad1457",
+                    "fontStyle": "bold"
+                }
+            },
+            {
+                "name": "Label Name",
+                "scope": [ "entity.name.namespace.label.text.sf" ],
+                "settings": {
+                    "foreground": "#e91e63",
                     "fontStyle": "bold underline"
                 }
             },
             {
-                "name": "Dialog Tags",
-                "scope": [
-                    "markup.heading.dialog.metadata.sf"
-                ],
+                "name": "Label Metadata",
+                "scope": [ "entity.name.namespace.label.metadata.sf" ],
+                "settings": {
+                    "foreground": "#f06292",
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "name": "Goto Sign",
+                "scope": [ "keyword.control.goto.sign.sf" ],
+                "settings": {
+                    "foreground": "#4527a0",
+                    "fontStyle": "bold"
+                }
+            },
+            {
+                "name": "Goto Label Name",
+                "scope": [ "keyword.control.goto.text.sf" ],
+                "settings": {
+                    "foreground": "#673ab7",
+                    "fontStyle": "bold"
+                }
+            },
+            {
+                "name": "Goto Metadata",
+                "scope": [ "keyword.control.goto.metadata.sf" ],
+                "settings": {
+                    "foreground": "#b39ddb",
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "name": "Options Sign",
+                "scope": [ "entity.name.type.enum.option.sign.sf" ],
+                "settings": {
+                    "foreground": "#c62828",
+                    "fontStyle": "bold"
+                }
+            },
+            {
+                "name": "Options Text",
+                "scope": [ "entity.name.type.enum.option.text.sf" ],
+                "settings": {
+                    "foreground": "#ef5350",
+                    "fontStyle": "bold"
+                }
+            },
+            {
+                "name": "Options Metadata",
+                "scope": [ "entity.name.type.enum.option.metadata.sf" ],
+                "settings": {
+                    "foreground": "#e57373",
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "name": "Command Sign",
+                "scope": [ "entity.name.function.command.sign.sf" ],
+                "settings": {
+                    "foreground": "#2e7d32",
+                    "fontStyle": "bold"
+                }
+            },
+            {
+                "name": "Command Label Name",
+                "scope": [ "entity.name.function.command.text.sf" ],
+                "settings": {
+                    "foreground": "#66bb6a",
+                    "fontStyle": "bold"
+                }
+            },
+            {
+                "name": "Command Metadata",
+                "scope": [ "entity.name.function.command.metadata.sf" ],
+                "settings": {
+                    "foreground": "#a5d6a7",
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "name": "Richtext Tag",
+                "scope": [ "entity.name.tag.sf" ],
                 "settings": {
                     "foreground": "#2196f3",
                     "fontStyle": ""
                 }
             },
             {
-                "name": "Dialog Text",
-                "scope": [
-                    "variable.dialog.data.sf"
-                ],
+                "name": "Math Operator",
+                "scope": [ "keyword.operator.sf" ],
                 "settings": {
-                    "foreground": "#78909c"
+                    "foreground": "#757575",
+                    "fontStyle": ""
                 }
             },
             {
-                "name": "Player Option",
-                "scope": [
-                    "invalid.option.sf"
-                ],
+                "name": "Variable",
+                "scope": [ "variable.other.property.sf" ],
                 "settings": {
-                    "foreground": "#ef5350"
+                    "foreground": "#b3e5fc",
+                    "fontStyle": ""
                 }
             },
             {
-                "name": "Script Command",
-                "scope": [
-                    "comment.command.sf"
-                ],
+                "name": "Keyword",
+                "scope": [ "constant.language.sf" ],
+                "settings": {
+                    "foreground": "#2196f3",
+                    "fontStyle": ""
+                }
+            },
+            {
+                "name": "Tag",
+                "scope": [ "variable.other.constant.sf" ],
+                "settings": {
+                    "foreground": "#ff6e40",
+                    "fontStyle": ""
+                }
+            },
+            {
+                "name": "Metadata Go To",
+                "scope": [ "keyword.control.goto.text.param.sf" ],
+                "settings": {
+                    "foreground": "#b39ddb",
+                    "fontStyle": ""
+                }
+            },
+            {
+                "name": "Number",
+                "scope": [ "constant.numeric.sf" ],
+                "settings": {
+                    "foreground": "#008d97",
+                    "fontStyle": ""
+                }
+            },
+            {
+                "name": "Function",
+                "scope": [ "entity.name.function.instruction.sf" ],
                 "settings": {
                     "foreground": "#66bb6a",
-                    "fontStyle": "italic"
+                    "fontStyle": ""
                 }
             },
             {
-                "name": "Go To Label",
-                "scope": [
-                    "keyword.control.goto.sf"
-                ],
+                "name": "Function Param",
+                "scope": [ "variable.parameter.sf" ],
                 "settings": {
-                    "foreground": "#9575cd"
+                    "foreground": "#a5d6a7",
+                    "fontStyle": ""
+                }
+            },
+            {
+                "name": "String",
+                "scope": [ "string.sf" ],
+                "settings": {
+                    "foreground": "#90a4ae",
+                    "fontStyle": ""
                 }
             }
         ]

@@ -6,12 +6,7 @@
 
     // Symbols used as brackets.
     "brackets": [
-        [ "{", "}" ],
-        [ "[", "]" ],
-        [ "(", ")" ],
-        [ "'", "'" ],
-        [ "\"", "\"" ],
-        [ "<", ">" ],
+        // ~
     ],
 
     // Symbols that are auto closed when typing.
