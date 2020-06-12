@@ -51,68 +51,72 @@
 										"2": {
 											"patterns": [
 												{
-													"name": "metadata.expressions.sf",
-													"match": "(\\#.[^\\s]*)|(->.[^\\s]*)|((.*?)(==|!=|>=|<=|(?<!-)>|<|=|\\+|-(?!>)|\\*|\/)(.*))|(\\w+.*)",
-													"captures": {
-														"1": {
-															"name": "variable.other.constant.sf"
-														},
-														"2": {
-															"name": "keyword.control.goto.text.param.sf"
-														},
-														"4": {
-															"name": "lvalue.sf"
-														},
-														"5": {
-															"name": "keyword.operator.sf"
-														},
-														"6": {
-															"patterns": [
-																{
-																	"include": "#richtext"
-																},
-
-																{
-																	"name": "constant.language.sf",
-																	"match": "(?<!\\w)(true|false|on|off)(?!\\w)"
-																},
-
-																{
-																	"name": "constant.numeric.sf",
-																	"match": "(?<!\\w)([\\d]+)(?!\\w)"
-																},
-
-																{
-																	"name": "string.sf",
-																	"match": "\\w+"
-																},
-
-																{
-																	"name": "variable.other.property.sf",
-																	"match": "{.*}"
-																}
-															]
-														},
-														"7": {
-															"patterns": [
-																{
-																	"name": "entity.name.function.instruction.sf",
-																	"match": "\\w+"
-																},
-
-																{
-																	"name": "variable.parameter.sf",
-																	"match": "\\s\\w+"
-																}
-															]
-														}
-													}
+													"include": "#expression"
 												}
 											]
 										}
 									}
 								}
 							]
+						}
+					]
+				}
+			}
+		},
+
+		"expression" : {
+			"name": "metadata.expression.sf",
+			"match": "(\\#.[^\\s]*)|(->.[^\\s]*)|((.*?)(==|!=|>=|<=|(?<!-)>|<|=|\\+|-(?!>)|\\*|\/)(.*))|(\\w+.*)",
+			"captures": {
+				"1": {
+					"name": "variable.other.constant.sf"
+				},
+				"2": {
+					"name": "keyword.control.goto.text.param.sf"
+				},
+				"4": {
+					"name": "lvalue.sf"
+				},
+				"5": {
+					"name": "keyword.operator.sf"
+				},
+				"6": {
+					"patterns": [
+						{
+							"include": "#richtext"
+						},
+
+						{
+							"name": "constant.language.sf",
+							"match": "(?<!\\w)(true|false|on|off)(?!\\w)"
+						},
+
+						{
+							"name": "constant.numeric.sf",
+							"match": "(?<!\\w)([\\d]+)(?!\\w)"
+						},
+
+						{
+							"name": "string.sf",
+							"match": "\\w+"
+						},
+
+						{
+							"name": "variable.other.property.sf",
+							"match": "{.*}"
+						}
+					]
+				},
+				"7": {
+					"patterns": [
+						{
+							"name": "entity.name.function.instruction.sf",
+							"match": "\\w+"
+						},
+
+						{
+							"name": "variable.parameter.sf",
+							"match": "\\s\\w+"
 						}
 					]
 				}
@@ -230,7 +234,12 @@
 				},
 
 				"2": {
-					"name": "entity.name.function.command.text.sf"
+					"name": "entity.name.function.command.text.sf",
+					"patterns": [
+						{
+							"include": "#expression"
+						}
+					]
 				},
 
 				"3": {
