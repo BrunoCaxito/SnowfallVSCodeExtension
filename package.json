@@ -3,10 +3,10 @@
     "publisher": "BrunoCaxito",
     "displayName": "Snowfall Storytelling Language Support",
     "description": "Syntax highlighting for Snowfall Storytelling Language",
-    "version": "1.0",
+    "version": "1.0.0",
     "license": "MIT",
     "homepage": "https://github.com/BrunoCaxito/SnowfallVSCodeExtension",
-    "icon": "./icon.png",
+    "icon": "icon.png",
 
     "author": {
         "email": "brunocaxito@yahoo.com",
@@ -24,7 +24,7 @@
     },
 
     "galleryBanner": {
-        "color": "#d811f5"
+        "color": "#eeeeee"
     },
 
     "categories": [
