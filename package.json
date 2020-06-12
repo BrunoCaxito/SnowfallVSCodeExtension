@@ -1,11 +1,30 @@
 {
-    "name": "snowfall-script",
-    "displayName": "Snowfall Storytelling Plugin Support",
-    "description": "Syntax highlighting for Snowfall Storytelling Plugin",
-    "version": "1.0.0",
+    "name": "snowfall-language",
+    "publisher": "BrunoCaxito",
+    "displayName": "Snowfall Storytelling Language Support",
+    "description": "Syntax highlighting for Snowfall Storytelling Language",
+    "version": "1.0",
+    "license": "MIT",
+    "homepage": "https://github.com/BrunoCaxito/SnowfallVSCodeExtension",
+    "icon": "./icon.png",
+
+    "author": {
+        "email": "brunocaxito@yahoo.com",
+        "name": "Bruno Caxito",
+        "url": "https://github.com/BrunoCaxito"
+    },
 
     "engines": {
         "vscode": "^1.39.0"
+    },
+
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/BrunoCaxito/SnowfallVSCodeExtension"
+    },
+
+    "galleryBanner": {
+        "color": "#d811f5"
     },
 
     "categories": [
