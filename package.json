@@ -3,7 +3,7 @@
     "publisher": "BrunoCaxito",
     "displayName": "Snowfall Storytelling Language Support",
     "description": "Syntax highlighting for Snowfall Storytelling Language",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "license": "MIT",
     "homepage": "https://github.com/BrunoCaxito/SnowfallVSCodeExtension",
     "icon": "icon.png",
