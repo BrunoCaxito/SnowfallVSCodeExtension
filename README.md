@@ -183,6 +183,30 @@ Add this to your __settings.json__, for better code coloring.
                 }
             },
             {
+                "name": "Directive Sign",
+                "scope": [ "entity.name.other.preprocessor.macro.directive.sign.sf" ],
+                "settings": {
+                    "foreground": "#fbc02d",
+                    "fontStyle": "bold"
+                }
+            },
+            {
+                "name": "Directive Name",
+                "scope": [ "entity.name.other.preprocessor.macro.directive.text.sf" ],
+                "settings": {
+                    "foreground": "#ffee58",
+                    "fontStyle": "bold"
+                }
+            },
+            {
+                "name": "Directive Param",
+                "scope": [ "entity.name.other.preprocessor.macro.directive.param.sf" ],
+                "settings": {
+                    "foreground": "#fff59d",
+                    "fontStyle": ""
+                }
+            },
+            {
                 "name": "Richtext Tag",
                 "scope": [ "entity.name.tag.sf" ],
                 "settings": {
