@@ -1,7 +1,7 @@
 {
     // Symbols used as comments.
     "comments": {
-        // ~
+        "lineComment": "#"
     },
 
     // Symbols used as brackets.
