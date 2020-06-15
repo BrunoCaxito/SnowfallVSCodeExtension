@@ -119,7 +119,7 @@
 
 						{
 							"name": "variable.parameter.sf",
-							"match": "\\s\\w+"
+							"match": "(\\s|\\\\)\\w+"
 						}
 					]
 				}
