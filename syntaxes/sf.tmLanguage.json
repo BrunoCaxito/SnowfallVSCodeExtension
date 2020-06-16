@@ -75,7 +75,7 @@
 					"name": "variable.other.constant.sf"
 				},
 				"2": {
-					"name": "keyword.control.goto.text.param.sf"
+					"name": "keyword.control.goto.text.sf"
 				},
 				"4": {
 					"name": "lvalue.sf"
