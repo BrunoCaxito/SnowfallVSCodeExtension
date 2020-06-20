@@ -137,12 +137,12 @@
 
 		"variable": {
 			"name": "variable.other.property.sf",
-			"match": "{.*}"
+			"match": "{\\w+}"
 		},
 
 		"definition": {
 			"name": "entity.name.other.preprocessor.macro.directive.text.sf",
-			"match": "\\[\\[.*\\]\\]"
+			"match": "\\[\\[\\w+\\]\\]"
 		},
 
 		"richtext": {
