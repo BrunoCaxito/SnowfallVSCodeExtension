@@ -97,7 +97,7 @@
 
 						{
 							"name": "constant.language.sf",
-							"match": "(?<!\\w)(true|false|on|off)(?!\\w)"
+							"match": "(?<!\\w)(true|false|on|off|null)(?!\\w)"
 						},
 
 						{
