@@ -349,13 +349,28 @@
 				},
 
 				{
-					"name": "comment.line.sf",
-					"match": "^(?!(\\-|\\t|@|\\*|\\$))(.*)"
+					"name": "comment.indented.sf",
+					"match": "^\\t*(#\\ )(.*$)",
+					"captures": {
+						"1": {
+							"name": "comment.indented.sign.sf"
+						},
+
+						"2": {
+							"name": "comment.indented.text.sf",
+							"patterns": [
+								{
+									"name": "comment.indented.text.topic.sf",
+									"match": "<>"
+								}
+							]
+						}
+					}
 				},
 
 				{
-					"name": "comment.indented.sf",
-					"match": "^\\t*(# )(.*?)(?=\\||$)(.*$)"
+					"name": "comment.line.sf",
+					"match": "^(?!(\\-|\\t|@|\\*|\\$))(.*)"
 				}
 			]
 		},
