@@ -8,7 +8,7 @@ This extension provides syntax highlighting for _Snowfall Storytelling Language_
 
 ## Snowfall Storytelling Language
 
-_Snowfall Storytelling Language_ is a simple markup language, used to write interactive stories using [Snowfall Storytelling Plugin](https://snowfalldoc.web.app/).
+_Snowfall Storytelling Language_ is a simple markup language, used to write interactive stories using [Snowfall Storytelling Plugin](https://www.snowfalldoc.com/).
 
 ---
 
@@ -21,7 +21,7 @@ Add this to your __settings.json__, for better code coloring.
     "editor.tokenColorCustomizations": {
         "textMateRules": [
             {
-                "name": "Comment",
+                "name": "Title Comment",
                 "scope": [ "comment.title.sf" ],
                 "settings": {
                     "foreground": "#e0e0e0",
@@ -29,7 +29,7 @@ Add this to your __settings.json__, for better code coloring.
                 }
             },
             {
-                "name": "Comment",
+                "name": "Header Comment",
                 "scope": [ "comment.header.sf" ],
                 "settings": {
                     "foreground": "#e0e0e0",
@@ -37,10 +37,18 @@ Add this to your __settings.json__, for better code coloring.
                 }
             },
             {
-                "name": "Comment",
+                "name": "Comment Sigh",
+                "scope": [ "comment.indented.sign.sf" ],
+                "settings": {
+                    "foreground": "#3A3A3A",
+                    "fontStyle": "bold italic"
+                }
+            },
+            {
+                "name": "Comment Text",
                 "scope": [
                     "comment.line.sf",
-                    "comment.indented.sf"
+                    "comment.indented.text.sf"
                 ],
                 "settings": {
                     "foreground": "#424242",
@@ -48,7 +56,15 @@ Add this to your __settings.json__, for better code coloring.
                 }
             },
             {
-                "name": "Cancatenation Operator",
+                "name": "Comment Sigh",
+                "scope": [ "comment.indented.text.topic.sf" ],
+                "settings": {
+                    "foreground": "#000000",
+                    "fontStyle": ""
+                }
+            },
+            {
+                "name": "Concatenation Operator",
                 "scope": [ "keyword.operator.concat.sf" ],
                 "settings": {
                     "foreground": "#303030",
@@ -114,7 +130,7 @@ Add this to your __settings.json__, for better code coloring.
                 "name": "Goto Sign",
                 "scope": [ "keyword.control.goto.sign.sf" ],
                 "settings": {
-                    "foreground": "#4527a0",
+                    "foreground": "#512da8",
                     "fontStyle": "bold"
                 }
             },
