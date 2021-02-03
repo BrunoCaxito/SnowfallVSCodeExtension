@@ -30,7 +30,7 @@ Add this to your __settings.json__, for better code coloring.
             },
             {
                 "name": "Header Comment",
-                "scope": [ "comment.header.sf" ],
+                "scope": [ "comment.header.text.sf" ],
                 "settings": {
                     "foreground": "#e0e0e0",
                     "fontStyle": "underline"

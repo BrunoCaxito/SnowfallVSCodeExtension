@@ -1,52 +1,58 @@
 {
-    "name": "snowfall-language",
-    "publisher": "BrunoCaxito",
-    "displayName": "Snowfall Storytelling Language Support",
-    "description": "Syntax highlighting for Snowfall Storytelling Language",
-    "version": "1.2.1",
-    "license": "MIT",
-    "homepage": "https://github.com/BrunoCaxito/SnowfallVSCodeExtension",
-    "icon": "icon.png",
+	"name": "snowfall-language",
+	"publisher": "BrunoCaxito",
+	"displayName": "Snowfall Storytelling Language Support",
+	"description": "Syntax highlighting for Snowfall Storytelling Language",
+	"version": "1.2.1",
+	"license": "MIT",
+	"homepage": "https://github.com/BrunoCaxito/SnowfallVSCodeExtension",
+	"icon": "icon.png",
 
-    "author": {
-        "email": "brunocaxito@yahoo.com",
-        "name": "Bruno Caxito",
-        "url": "https://github.com/BrunoCaxito"
-    },
+	"author": {
+		"email": "brunocaxito@yahoo.com",
+		"name": "Bruno Caxito",
+		"url": "https://github.com/BrunoCaxito"
+	},
 
-    "engines": {
-        "vscode": "^1.39.0"
-    },
+	"engines": {
+		"vscode": "^1.39.0"
+	},
 
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/BrunoCaxito/SnowfallVSCodeExtension"
-    },
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/BrunoCaxito/SnowfallVSCodeExtension"
+	},
 
-    "galleryBanner": {
-        "color": "#e1bee7"
-    },
+	"galleryBanner": {
+		"color": "#e1bee7"
+	},
 
-    "categories": [
-        "Programming Languages"
-    ],
+	"categories": [
+		"Programming Languages"
+	],
 
-    "contributes": {
-        "languages": [
-            {
-                "id": "snowfall",
-                "aliases": ["Snowfall Script", "SF"],
-                "extensions": [".sf"],
-                "configuration": "./language-configuration.json"
-            }
-        ],
+	"contributes": {
+		"languages": [
+			{
+				"id": "snowfall",
+				"aliases": [ "Snowfall Script", "SF" ],
+				"extensions": [ ".sf" ],
+				"configuration": "./language-configuration.json"
+			}
+		],
 
-        "grammars": [
-            {
-                "language": "snowfall",
-                "scopeName": "source.sf",
-                "path": "./syntaxes/sf.tmLanguage.json"
-            }
-        ]
-    }
+		"grammars": [
+			{
+				"language": "snowfall",
+				"scopeName": "source.sf",
+				"path": "./syntaxes/sf.tmLanguage.json"
+			}
+		]
+	},
+
+	"__metadata": {
+		"id": "25cdb44c-1575-40d3-ab06-08090f68aa10",
+		"publisherDisplayName": "Bruno Caxito",
+		"publisherId": "d896f252-1289-45f8-9c4e-5f901776849c"
+	}
 }
