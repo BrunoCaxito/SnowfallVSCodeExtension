@@ -345,7 +345,7 @@
 
 				{
 					"name": "comment.header.sf",
-					"match": "(\\s*|\\t*)([0-9A-Z\\s\\.\\-\\'\\,]{3,})",
+					"match": "(\\s*|\\t*)([0-9A-Z\\s\\.\\-\\'\\,]{12,})",
 					"captures": {
 						"1": {
 							"name": "comment.header.indentation.sf"
