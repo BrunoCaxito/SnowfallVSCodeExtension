@@ -14,7 +14,13 @@ _Snowfall Storytelling Language_ is a simple markup language, used to write inte
 
 ## Code Coloring
 
-Add this to your __settings.json__, for better code coloring.
+The default syntax highlighting is enough to start writing snowfall scripts, but we recommend adding this custom color settings.
+
+### Default and Custom
+
+![alt text](./img/example.jpg)
+
+> Add this to your __settings.json__
 
 ```json
 {
@@ -306,9 +312,5 @@ Add this to your __settings.json__, for better code coloring.
     }
 }
 ```
-
-## Example
-
-![alt text](./img/example.jpg)
 
 ---
