@@ -307,4 +307,8 @@ Add this to your __settings.json__, for better code coloring.
 }
 ```
 
+## Example
+
+![alt text](./img/example.jpg)
+
 ---
