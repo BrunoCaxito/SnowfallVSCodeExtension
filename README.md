@@ -4,6 +4,10 @@ This extension provides syntax highlighting for _Snowfall Storytelling Language_
 
 > [Extension Marketplace Page](https://marketplace.visualstudio.com/items?itemName=BrunoCaxito.snowfall-language)
 
+Quick Video Tutorial to setup Visual Studio Code for Snowfall storytelling language
+
+> [Quick Video Tutorial](https://youtu.be/qzv9KRxmaWk)
+
 ---
 
 ## Snowfall Storytelling Language
